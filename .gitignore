@@ -1,0 +1,23 @@
+# created by virtualenv automatically
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+Lib/
+db.sqlite3
+Scripts/
+share/
+pyvenv.cfg
+.env
+fine_tuned_models/
+finetuned_BERT_epoch_1.model
+finetuned_BERT_epoch_2.model
+finetuned_BERT_epoch_3.model
+finetuned_BERT_epoch_4.model
+finetuned_BERT_epoch_5.model
+staticfiles/
+dump.sql
+schema.sql
+sentences.csv
+myenv/
+

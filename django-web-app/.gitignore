@@ -1,0 +1,4 @@
+.env
+myenv/
+gunicorn.service
+dapsy/tempCodeRunnerFile.py

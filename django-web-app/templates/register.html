@@ -1,0 +1,110 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% comment %} {% block title %} Register {% endblock title %} {% endcomment %}
+
+{% block head %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% comment %} <link rel="stylesheet" href="{% static 'css/responsive.css' %}"> {% endcomment %}
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
+<link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+<title>Dapsy |Register {% block title %}{% endblock title %}</title>
+
+{% endblock head %}
+
+{% block main %}
+<div class="mainContainer">
+   
+ 
+    {% include 'messages.html' %}
+    <div class="mc-div">
+        <div class="sub-c">
+        
+            <div class="sub-c-1">
+                <h1 class="head">Register</h1>
+                <div class="form">
+                    <form id="my-form" method="post" action="/register/">
+                        {% csrf_token %}
+                        
+                        <div class="form-c-1">
+                            <label class="sub-head" for="username">
+                                Username
+                            </label>
+                            <!-- <img class="input-img" src="/static/img/user2.png" alt="user"> -->
+<!--                             <i class='bx bxs-user input-img'></i> -->
+                            <input class="form-f" id="username" name="username" placeholder="Username"  required  type="text">
+                            
+                        </div>
+                        <!-- <div id="flname" class="form-c-1">
+                        
+                            <input class="form-f" id="firstnamae" name="firstname" placeholder="First Name"  required  type="text">
+                    
+                            <input class="form-f" id="lastname" name="lastname" placeholder="Last Name"  type="text">
+                            
+                        </div> -->
+                        <div class="form-c-1">
+                            <label class="sub-head" for="email">
+                                Email
+                            </label>
+                            <!-- <img class="input-img" src="/static/img/email.png" alt="user"> -->
+<!--                             <i class='bx bxs-envelope input-img'></i> -->
+    
+                            <input class="form-f" id="email" name="email" placeholder="example@email.com" required  type="email">
+                            
+                        </div>
+                        
+    
+                        <div class="form-c-1">
+                            <label class="sub-head" for="password">
+                                Password
+                            </label>
+                            <div class="password-container">
+                                <input class="form-f" id="password" name="password" placeholder="Type your Password" type="password" required>
+                                <i class="eye-icon" id="eye-icon-one">👁️</i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-c-1">
+                            <label class="sub-head" for="cnf-password">
+                                Confirm Password
+                            </label>
+                            <div class="password-container">
+                                <input class="form-f" id="cnf-password" name="cnf-password" placeholder="Confirm your password" type="password" required>
+                                <i class="eye-icon" id="eye-icon-two">👁️</i>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <p style=" font-size:14px; font-family: var(--font-secondary);" > <i style="font-size: 14px;" class='bx bx-mail-send'></i> Please provide valid Email address. Email verification is required.</p>
+    
+                        
+                    </form>
+                    <!-- <h4 id="forgot"> <a href="#">By clicking you agree Terms & Conditions. </a></h4> -->
+    
+                    <button id="signup-btn" class="signup-btn">Register</button>
+    
+                </div>
+                <div class="login">
+                    <p>By signing up you agree to our <a style="color: var(--color-primary);" href="{% url "home:privacy-policy" %}">privacy policy</a> and <a style="color: var(--color-primary);" href="{% url "home:terms-of-use" %}">terms of use</a>. </p>
+                    Already have an account! <span> <a href="{% url 'home:loginUser' %}">Login</a></span>.
+                </div>
+            </div>
+        </div>
+
+        <div class="signup-img-box">
+            <img src="{% static 'img/register.webp' %}" alt="Register Dapsy">
+        </div> 
+    </div>
+    
+
+</div>
+{% endblock main %}
+
+{% block script %}
+<script src="{% static 'js/script.js' %}"></script>
+<script src="{% static 'js/register.js' %}"></script>
+<script src="{% static 'js/messages.js' %}"></script>
+{% endblock script %}
