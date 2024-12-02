@@ -23,7 +23,7 @@ Dapsy is a powerful web extension designed to empower users by identifying and c
 ### Sweeps Training Hyperparametrs
 
 <p align="center">
-  <img src="https://onionreads.com/wp-content/uploads/2024/05/dapsy-bert-12sweeps.png" alt="BERT Fine-Tuned Sweep training " width="600px" />
+  <img src="https://onionreads.com/wp-content/uploads/2024/05/cogni-bert-12sweeps.png" alt="BERT Fine-Tuned Sweep training " width="600px" />
 </p>
 
 
